@@ -1,3 +1,4 @@
+import AppLayout from "@/components/layout/AppLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -15,26 +16,18 @@ import {
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-card">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-primary">
-                <Wallet className="h-6 w-6 text-primary-foreground" />
-              </div>
-              <h1 className="text-2xl font-bold text-foreground">مالي</h1>
-            </div>
-            <Button variant="outline" size="sm">
-              <Calendar className="mr-2 h-4 w-4" />
-              هذا الشهر
-            </Button>
+    <AppLayout>
+      <div className="container mx-auto px-4 py-8">
+        <div className="mb-8 flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold text-foreground">لوحة التحكم</h1>
+            <p className="text-muted-foreground">نظرة عامة على وضعك المالي</p>
           </div>
+          <Button variant="outline" size="sm">
+            <Calendar className="mr-2 h-4 w-4" />
+            هذا الشهر
+          </Button>
         </div>
-      </header>
-
-      <main className="container mx-auto px-4 py-8">
         {/* Overview Cards */}
         <div className="mb-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           <Card className="relative overflow-hidden border-l-4 border-l-primary">
@@ -288,8 +281,8 @@ const Dashboard = () => {
             </div>
           </CardContent>
         </Card>
-      </main>
-    </div>
+      </div>
+    </AppLayout>
   );
 };
 
