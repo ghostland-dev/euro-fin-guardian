@@ -1,5 +1,7 @@
 # Mali: Personal Finance
 
+[![CI](https://github.com/ghostland-dev/euro-fin-guardian/actions/workflows/ci.yml/badge.svg)](https://github.com/ghostland-dev/euro-fin-guardian/actions/workflows/ci.yml)
+
 Personal finance SaaS (Arabic UI): budget, debts, goals and investments.
 
 ## Features
